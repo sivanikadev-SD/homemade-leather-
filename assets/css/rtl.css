@@ -1,0 +1,325 @@
+/* ━━━━━━━━━━━━━━━━ RTL.CSS – Cordovan Atelier ━━━━━━━━━━━━━━━━ */
+/*
+  Applied when <html dir="rtl"> is set.
+  Flexbox rows reverse automatically with dir="rtl".
+  CSS Grid does NOT — so we set direction:rtl on each grid container.
+  Physical positioning properties (left/right, border-left/right,
+  padding-left/right, margin-left/right) must be explicitly flipped.
+*/
+
+/* ━━━━━━━━━━━━━━━━ BASE ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ━━━━━━━━━━━━━━━━ TYPOGRAPHY ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .eyebrow {
+  letter-spacing: 0.1em; /* slightly reduced — wide tracking looks odd in RTL */
+}
+
+/* ━━━━━━━━━━━━━━━━ NAV ━━━━━━━━━━━━━━━━ */
+/* Flexbox reverses automatically; only physical overrides needed */
+[dir="rtl"] .nav-inner {
+  direction: rtl;
+}
+[dir="rtl"] .nav-links a {
+  letter-spacing: 0.08em;
+}
+
+/* Stitching strip — swap side decorations */
+[dir="rtl"] .brand-strip::before {
+  left: auto;
+  right: 24px;
+}
+[dir="rtl"] .brand-strip::after {
+  right: auto;
+  left: 24px;
+}
+
+/* ━━━━━━━━━━━━━━━━ MOBILE MENU ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .mobile-menu {
+  text-align: right;
+}
+
+/* ━━━━━━━━━━━━━━━━ LAYOUT HELPERS ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .container {
+  direction: rtl;
+}
+
+/* ━━━━━━━━━━━━━━━━ HERO ━━━━━━━━━━━━━━━━ */
+/* Two-column grid — reverse so text is on the right */
+[dir="rtl"] .hero-inner {
+  direction: rtl;
+}
+[dir="rtl"] .hero-content p {
+  margin-right: 0;
+}
+/* Floating info tag — flip from bottom-left to bottom-right */
+[dir="rtl"] .hero-tag {
+  left: auto;
+  right: 28px;
+  border-left: none;
+  border-right: 4px solid var(--hide);
+}
+/* Awl-punch dots — flip from right edge to left edge */
+[dir="rtl"] .punch-row {
+  right: auto;
+  left: 24px;
+}
+
+/* ━━━━━━━━━━━━━━━━ CRAFT STORY ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .craft-grid {
+  direction: rtl;
+}
+[dir="rtl"] .craft-step {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+[dir="rtl"] .step-body h4,
+[dir="rtl"] .step-body p {
+  text-align: right;
+}
+
+/* ━━━━━━━━━━━━━━━━ PRODUCTS ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .products-header {
+  direction: rtl;
+}
+[dir="rtl"] .product-grid {
+  direction: rtl;
+}
+[dir="rtl"] .product-info {
+  text-align: right;
+}
+[dir="rtl"] .product-footer {
+  direction: rtl;
+}
+/* Badge: flip from top-right to top-left */
+[dir="rtl"] .product-badge {
+  right: auto;
+  left: 14px;
+}
+
+/* ━━━━━━━━━━━━━━━━ CUSTOMISATION ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .custom-inner {
+  direction: rtl;
+  text-align: right;
+}
+[dir="rtl"] .custom-grid {
+  direction: rtl;
+}
+/* Option cards: flip accent border from left to right */
+[dir="rtl"] .option-card {
+  flex-direction: row-reverse;
+  border-left: 1px solid var(--seam);
+  border-right: 4px solid var(--hide);
+}
+[dir="rtl"] .option-text {
+  text-align: right;
+}
+
+/* ━━━━━━━━━━━━━━━━ TESTIMONIALS ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .testi-grid {
+  direction: rtl;
+}
+[dir="rtl"] .testi-card {
+  text-align: right;
+}
+/* Corner stitches — flip the L-shaped corners */
+[dir="rtl"] .testi-card::before {
+  left: auto;
+  right: 10px;
+  border-width: 1px 1px 0 0; /* top-right corner */
+}
+[dir="rtl"] .testi-card::after {
+  right: auto;
+  left: 10px;
+  border-width: 0 0 1px 1px; /* bottom-left corner */
+}
+[dir="rtl"] .reviewer {
+  flex-direction: row-reverse;
+}
+
+/* ━━━━━━━━━━━━━━━━ CTA BANNER ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .cta-banner {
+  direction: rtl;
+}
+
+/* ━━━━━━━━━━━━━━━━ FOOTER ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .footer-inner {
+  direction: rtl;
+}
+[dir="rtl"] .footer-grid {
+  direction: rtl;
+}
+[dir="rtl"] .footer-col ul {
+  text-align: right;
+}
+[dir="rtl"] .footer-bottom {
+  direction: rtl;
+}
+
+/* ━━━━━━━━━━━━━━━━ PAGE HERO (inner pages) ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .page-hero-inner {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ━━━━━━━━━━━━━━━━ SERVICES ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .services-grid {
+  direction: rtl;
+}
+[dir="rtl"] .service-card {
+  text-align: right;
+}
+/* Corner stitches — flip */
+[dir="rtl"] .service-card::before {
+  left: auto;
+  right: 8px;
+  border-width: 1px 1px 0 0; /* top-right corner */
+}
+[dir="rtl"] .service-card::after {
+  right: auto;
+  left: 8px;
+  border-width: 0 0 1px 1px; /* bottom-left corner */
+}
+[dir="rtl"] .service-icon {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+/* Process timeline */
+[dir="rtl"] .process-timeline {
+  direction: rtl;
+}
+[dir="rtl"] .process-step {
+  text-align: right;
+}
+/* Connecting dashed line stays the same since it spans full width */
+
+/* ━━━━━━━━━━━━━━━━ ABOUT ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .about-grid {
+  direction: rtl;
+}
+/* Pull quote: flip accent border from left to right */
+[dir="rtl"] .about-pull {
+  border-left: none;
+  border-right: 5px solid var(--hide);
+  padding-left: 0;
+  padding-right: 28px;
+}
+[dir="rtl"] .about-pull blockquote,
+[dir="rtl"] .about-pull cite {
+  text-align: right;
+}
+
+/* Values grid */
+[dir="rtl"] .values-grid {
+  direction: rtl;
+}
+[dir="rtl"] .value-card {
+  text-align: right;
+}
+
+/* ━━━━━━━━━━━━━━━━ CONTACT ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .contact-grid {
+  direction: rtl;
+}
+[dir="rtl"] .contact-item {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+[dir="rtl"] .contact-item h4,
+[dir="rtl"] .contact-item p {
+  text-align: right;
+}
+
+/* Form */
+[dir="rtl"] .form-group label {
+  text-align: right;
+  display: block;
+}
+[dir="rtl"] .form-group input,
+[dir="rtl"] .form-group select,
+[dir="rtl"] .form-group textarea {
+  text-align: right;
+  direction: rtl;
+}
+
+/* ━━━━━━━━━━━━━━━━ SHOP ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .shop-layout {
+  direction: rtl;
+}
+[dir="rtl"] aside {
+  text-align: right;
+}
+[dir="rtl"] .filter-item {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .shop-top {
+  direction: rtl;
+}
+[dir="rtl"] .shop-grid {
+  direction: rtl;
+}
+
+/* ━━━━━━━━━━━━━━━━ PRICING ━━━━━━━━━━━━━━━━ */
+[dir="rtl"] .pricing-grid {
+  direction: rtl;
+}
+[dir="rtl"] .pricing-card {
+  text-align: right;
+}
+[dir="rtl"] .feat {
+  flex-direction: row-reverse;
+}
+
+/* ━━━━━━━━━━━━━━━━ AUTH ━━━━━━━━━━━━━━━━ */
+/* Top-right controls — flip to top-left */
+[dir="rtl"] .auth-top-right {
+  right: auto;
+  left: 18px;
+}
+[dir="rtl"] .auth-card {
+  text-align: right;
+  direction: rtl;
+}
+/* Corner stitches — flip */
+[dir="rtl"] .auth-card::before {
+  left: auto;
+  right: 10px;
+  border-width: 1.5px 1.5px 0 0; /* top-right corner */
+}
+[dir="rtl"] .auth-card::after {
+  right: auto;
+  left: 10px;
+  border-width: 0 0 1.5px 1.5px; /* bottom-left corner */
+}
+[dir="rtl"] .auth-logo {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .social-btns {
+  direction: rtl;
+}
+[dir="rtl"] .social-btn {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .auth-divider {
+  direction: rtl;
+}
+[dir="rtl"] .remember-row {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .remember-row label {
+  flex-direction: row-reverse;
+}
+
+/* Password eye button — flip from right to left */
+[dir="rtl"] .eye-btn {
+  right: auto;
+  left: 12px;
+}
+[dir="rtl"] .input-wrap input {
+  padding-right: 15px;
+  padding-left: 44px;
+}

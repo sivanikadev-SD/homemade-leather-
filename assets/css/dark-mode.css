@@ -1,0 +1,27 @@
+/* ━━━━━━━━━━━━━━━━ DARK MODE OVERRIDES – Earthy Luxury ━━━━━━━━━━━━━━━━ */
+[data-theme="dark"] {
+  /* Brand – warmed up for dark bg */
+  --hide:      #C47E6A;   /* warmed burgundy-tan */
+  --hide-deep: #E0A080;   /* lighter highlight */
+  --wax:       #9A7450;   /* muted caramel */
+  --burnish:   #D4AF37;   /* gold stays */
+  --thread:    #9A7450;
+
+  /* Dark surfaces */
+  --parch:     #100C0B;   /* near-black warm */
+  --parch2:    #1A1210;   /* dark card ground */
+  --parch3:    #241915;   /* panel bg */
+  --vellum:    #1E1512;   /* dark card */
+
+  /* Text */
+  --ink:       #F0E8DE;
+  --ink-mid:   #B09080;
+  --ink-light: #7A5A50;
+
+  /* Structural */
+  --seam:      #3A2820;
+  --seam2:     #503C30;
+  --card-bg:   #1E1512;
+  --nav-bg:    rgba(16,12,11,0.98);
+  --shadow:    0 8px 40px rgba(0,0,0,0.55);
+}
