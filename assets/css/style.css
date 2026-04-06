@@ -1025,18 +1025,25 @@ section .container {
 
 /* ━━━━━━━━━━━━━━━━ CTA BANNER ━━━━━━━━━━━━━━━━ */
 .cta-banner {
-  background: linear-gradient(135deg, #3A1F1D 0%, #4B2E2B 60%, #5C3530 100%);
-  padding: 80px 48px;
+  background: linear-gradient(135deg, rgba(58,31,29,.85) 0%, rgba(75,46,43,.85) 60%, rgba(92,53,48,.85) 100%), url('../images/craft_workshop.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* parallax feel */
+  padding: 70px 48px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cta-banner::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center top, rgba(212, 175, 55, .08) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center top, rgba(212, 175, 55, .15) 0%, transparent 70%);
 }
 
 .cta-banner::after {
@@ -1170,7 +1177,9 @@ footer::before {
 /* ━━━━━━━━━━━━━━━━ PAGE HERO (inner pages) ━━━━━━━━━━━━━━━━ */
 .page-hero {
   padding-top: 73px;
-  background: var(--parch2);
+  background: linear-gradient(135deg, rgba(44,31,26,.85) 0%, rgba(44,31,26,.92) 100%), url('../images/hero_leather_bag.png');
+  background-size: cover;
+  background-position: center;
   position: relative;
   overflow: hidden;
 }
@@ -1181,23 +1190,40 @@ footer::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(var(--seam) 1px, transparent 1px),
-    linear-gradient(90deg, var(--seam) 1px, transparent 1px);
+    linear-gradient(rgba(245,241,235,.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,241,235,.1) 1px, transparent 1px);
   background-size: 32px 32px;
-  opacity: .15;
+  opacity: .2;
 }
 
 .page-hero-inner {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 80px 48px 72px;
+  padding: 50px 48px 60px;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page-hero-inner h1 {
+  color: #FAF3EE;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.page-hero-inner .eyebrow {
+  color: #FAF3EE;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  opacity: 0.9;
 }
 
 .page-hero-inner p {
   font-size: 1.05rem;
-  color: var(--ink-mid);
+  color: #FAF3EE;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  opacity: 0.9;
   margin-top: 16px;
   max-width: 52ch;
 }
@@ -2106,8 +2132,8 @@ footer::before {
 
 /* ━━━━━━━━━━━━━━━━ RESPONSIVE ━━━━━━━━━━━━━━━━ */
 
-/* —— Tablet: collapse nav at 1024px —— */
-@media (max-width:1024px) {
+/* —— Tablet: collapse nav at 1200px (to prevent link collision) —— */
+@media (max-width:1200px) {
 
   /* NAV: hide links + desktop-only buttons, show hamburger */
   .nav-links {
