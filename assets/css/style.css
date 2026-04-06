@@ -1453,6 +1453,7 @@ footer::before {
   font-weight: 400;
   color: var(--hide);
   line-height: 1;
+  font-variant-numeric: lining-nums;
 }
 
 .value-card h4 {
@@ -1626,6 +1627,16 @@ footer::before {
 .map-directions-btn:hover {
   background: var(--hide-deep);
   box-shadow: 0 6px 28px rgba(26, 15, 14, .45);
+}
+.card{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+.card-2{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
 }
 
 @media (max-width:768px) {
@@ -2022,6 +2033,12 @@ footer::before {
   width: 100%;
   height: 46px;
 }
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
 
 /* ━━━━━━━━━━━━━━━━ MOBILE MENU DRAWER ━━━━━━━━━━━━━━━━ */
 .mobile-menu-btn {
@@ -2295,7 +2312,9 @@ footer::before {
   .auth-card {
     padding: 32px 22px;
   }
-
+.grid{
+  grid-template-columns: 1fr;
+}
   .shop-layout {
     gap: 28px;
   }
@@ -2314,7 +2333,15 @@ footer::before {
   .nav-inner {
     height: 62px;
   }
-
+.grid{
+  grid-template-columns: 1fr;
+}
+.card{
+  grid-template-columns: 1fr;
+}
+.card-2{
+  grid-template-columns: 1fr;
+}
   .mobile-menu {
     top: 64px;
     max-height: calc(100vh - 64px);
