@@ -952,6 +952,9 @@ section .container {
   border: 1px solid var(--seam);
   padding: 32px 28px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .testi-card::before,
@@ -996,6 +999,7 @@ section .container {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-top: auto;
 }
 
 .reviewer-init {
@@ -1667,6 +1671,9 @@ footer::before {
   border: 1.5px solid var(--seam);
   padding: 38px 30px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .pricing-card.popular {
@@ -1751,6 +1758,7 @@ footer::before {
   letter-spacing: .12em;
   text-transform: uppercase;
   border-radius: var(--radius);
+  margin-top: auto;
 }
 
 /* ━━━━━━━━━━━━━━━━ SHOP ━━━━━━━━━━━━━━━━ */
@@ -2226,6 +2234,10 @@ footer::before {
   .services-grid {
     grid-template-columns: 1fr;
   }
+  
+  .card, .card-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* —— Mid-tablet 900px: reduce padding to prevent overflow —— */
@@ -2307,6 +2319,10 @@ footer::before {
 
   .values-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .card, .card-2 {
+    grid-template-columns: 1fr;
   }
 
   .auth-card {
