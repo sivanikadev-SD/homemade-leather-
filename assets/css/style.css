@@ -36,6 +36,7 @@
   --seam2: #BCA88E;
   /* medium border */
   --card-bg: #FFFFFF;
+  --overlay-bg: rgba(248, 245, 240, 0.85);
   --nav-bg: rgba(245, 241, 235, 0.97);
   --shadow: 0 8px 48px rgba(75, 46, 43, 0.12);
   --radius: 2px;
