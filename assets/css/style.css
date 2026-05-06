@@ -203,6 +203,31 @@ p.body {
   box-shadow: 0 2px 12px rgba(75, 46, 43, .25);
 }
 
+.btn-inverted {
+  background: #FAF3EE;
+  color: var(--hide-deep);
+  border: none;
+  padding: 0 28px;
+  height: 46px;
+  font-family: var(--font-ui);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: background .25s, transform .15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .15);
+}
+
+.btn-inverted:hover {
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
+}
+
 .btn-hide:hover {
   background: var(--hide-deep);
   box-shadow: 0 4px 20px rgba(75, 46, 43, .35);
@@ -851,7 +876,7 @@ section .container {
 
 .btn-cart:hover {
   background: var(--hide);
-  color: #FAF3EE;
+  color: #FFFFFF;
   border-color: var(--hide);
 }
 
@@ -1070,6 +1095,7 @@ section .container {
   color: rgba(245, 241, 235, .65);
   text-align: center;
   margin: 0 auto 36px;
+  padding: 16px;
   position: relative;
   z-index: 1;
   max-width: 52ch;
@@ -2362,6 +2388,9 @@ footer::before {
   .mobile-menu {
     top: 64px;
     max-height: calc(100vh - 64px);
+  }
+  .values-grid{
+    grid-template-columns: 1fr;
   }
 }
 

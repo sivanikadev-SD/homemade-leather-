@@ -25,3 +25,29 @@
   --nav-bg:    rgba(16,12,11,0.98);
   --shadow:    0 8px 40px rgba(0,0,0,0.55);
 }
+
+/* Contrast Overrides for Dark Mode Buttons */
+[data-theme="dark"] .btn-hide {
+  color: #1A0F0E; /* Dark text on light burgundy-tan background */
+  font-weight: 700;
+}
+
+[data-theme="dark"] .btn-parch {
+  background: #F0E8DE; /* Lighter parchment */
+  color: #1A0F0E;      /* Dark text */
+  font-weight: 700;
+}
+
+[data-theme="dark"] .btn-inverted {
+  background: #1A1210; /* Dark background for inverted buttons */
+  color: #F0E8DE;      /* Light text */
+  border: 1px solid var(--seam2);
+}
+
+[data-theme="dark"] .btn-inverted:hover {
+  background: #241915;
+}
+
+[data-theme="dark"] .btn-cart:hover {
+  color: #1A0F0E; /* Dark text on light hover bg */
+}
